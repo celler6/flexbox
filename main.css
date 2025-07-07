@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+  box-sizing: border-box;
+	}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+
+.flex-container,
+.flex-row {
+  display: flex;
+  background-color: #444;
+  margin: 20px 0;
+  height: 100px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+
+.flex-container > div,
+.flex-row > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 18px;
+  text-align: center;
+  flex-grow: 1;
+  border-radius: 5px;
+  transition: transform 0.2s, background-color 0.2s;
+  cursor: move;
+}
+
+.flex-container > div:hover,
+.flex-row > div:hover {
+  background-color: #ddd;
+  transform: scale(1.03);
+}
+
+
+.grow1 { flex-grow: 1; }
+.grow2 { flex-grow: 2; }
+.grow3 { flex-grow: 3; }
+
+
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 15px;
+  font-size: 16px;
+  color: #555;
+  background-color: #e0e0e0;
+  border-top: 1px solid #ccc;
+}
+
+@media (max-width: 768px) {
+  .flex-container,
+  .flex-row {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .flex-container > div,
+  .flex-row > div {
+    margin: 10px 0;
+    flex-grow: unset;
+	  }
+	}
